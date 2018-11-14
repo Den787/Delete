@@ -1,29 +1,31 @@
 <?php
 
-
-
-
-
-
         function calc($a,$znak,$b)
         {
+
+
+
             switch ($znak) {
-                case 66 :
+                case '-' :
                     $x = $a - $b;
-                    print($x);
                     return $x;
                 case '+' :
                     $x = $a + $b;
-                    print($x);
+
                     return $x;
                 case '*' :
                     $x = $a * $b;
-                    print($x);
+
                     return $x;
                 case '/' :
-                    $x = $a / $b;
-                    print($x);
-                    return $x;
+                    if ($b == 0) {
+                        echo 'на ноль делить нельзя';
+
+                    }
+                    else {
+                        $x = $a / $b;
+                        return $x;
+                    }
             }
         }
 

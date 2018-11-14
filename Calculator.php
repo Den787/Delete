@@ -1,15 +1,31 @@
 <?php
 include_once 'funcCalculator.php';
 
+if  (isset($_GET['submit'])) {
     $a = $_GET['a'];
     $b = $_GET['b'];
     $znak = $_GET['znak'];
 
+    if (!empty($a) && !empty($znak) && !empty($b)) {
 
-        $result = calc($a,$znak,$b);
-        print_r($result);
+        if (is_numeric($a) && is_numeric($b)) {
 
-    echo "Форма отправлена a = $a, znak = $znak, b = $b; <br/>";
+            $result = calc($a, $znak, $b);
+
+            if ($result != false) {
+
+                print_r($result);
+
+            }
+
+
+        }
+        else {
+            echo "Введены не числа";
+}
+    }
+
+}
 
 ?>
 
@@ -21,10 +37,10 @@ include_once 'funcCalculator.php';
 </head>
 <body>
 
-<form action="funcCalculator.php" method="get">
-    A: <input type="text" name="a"><br>
-    B: <input type="text" name="znak"><br>
-    C: <input type="text" name="b"><br>
+<form action="Calculator.php" method="get">
+    Число 1: <input type="text" name="a"><br>
+    Знак:    <input type="text" name="znak"><br>
+    Число 2: <input type="text" name="b"><br>
     <input type="submit" value="Submit" name="submit">
 </form>
 
