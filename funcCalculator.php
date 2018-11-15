@@ -18,16 +18,11 @@
 
                     return $x;
                 case '/' :
-                    if ($b == 0) {
-                        echo 'на ноль делить нельзя';
-
-                    }
-                    else {
-                        $x = $a / $b;
+                       $x = $a / $b;
                         return $x;
                     }
             }
-        }
+
 
 
 

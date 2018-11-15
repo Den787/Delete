@@ -1,10 +1,11 @@
 <?php
 include_once 'funcCalculator.php';
 
-if  (isset($_GET['submit'])) {
-    $a = $_GET['a'];
-    $b = $_GET['b'];
-    $znak = $_GET['znak'];
+if  (isset($_POST['submit'])) {
+    $a = $_POST['a'];
+    $b = $_POST['b'];
+    $znak = $_POST['znak'];
+
 
     if (!empty($a) && !empty($znak) && !empty($b)) {
 
@@ -14,7 +15,8 @@ if  (isset($_GET['submit'])) {
 
             if ($result != false) {
 
-                print_r($result);
+               print_r($result);
+               $x = $result;
 
             }
 
@@ -37,11 +39,17 @@ if  (isset($_GET['submit'])) {
 </head>
 <body>
 
-<form action="Calculator.php" method="get">
-    Число 1: <input type="text" name="a"><br>
-    Знак:    <input type="text" name="znak"><br>
-    Число 2: <input type="text" name="b"><br>
-    <input type="submit" value="Submit" name="submit">
+<form action="Calculator.php" method="post">
+    <p> Введите число 1: </p>
+    <input type="text" name="a"><br>
+    <p> Введите знак: </p>
+    <input type="text" name="znak"><br>
+    <p> Введите число 2: </p>
+    <input type="text" name="b"><br><br>
+    <input type="submit" value="Посчитать" name="submit">
+    <p> Ответ: </p>
+    <input type="text" disabled  value="<?php echo $x ?>">
+    <input type="reset" value="Очистить форму">
 </form>
 
 </body>
