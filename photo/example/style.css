@@ -1,0 +1,71 @@
+a.add_images {
+
+  /*  background: url(images/add_images_link.png); */
+
+        /* Путь к файлу с исходным рисунком  */
+
+    display: block; /*  Рисунок как блочный элемент */
+
+    width: 250px; /* Ширина рисунка */
+
+    height: 50px; /*  Высота рисунка */
+
+    text-decoration: none;
+
+}
+
+a.add_images:hover {
+
+    background: url(images/add_images_hover.png);
+
+        /* Путь к файлу с заменяемым рисунком  */
+
+}
+
+
+14
+.add_images_text
+15
+{
+    16
+    color: red;
+    17
+    font-weight: bold;
+    18
+    font-size: 14px;
+    19
+    padding-left: 30px;
+    20
+    padding-top: 15px;
+    21
+}
+22
+
+23
+.input
+24
+{
+    25
+    border: 1px solid red;
+    26
+}
+27
+
+28
+.label
+29
+{
+    30
+    color: red;
+    31
+}
+32
+
+33
+.img
+34
+{
+    35
+    width: 150px;
+    36
+}
