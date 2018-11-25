@@ -1,0 +1,54 @@
+картинка:
+- идентификатор
+- тип
+- дата публикации ?
+- миниатюра
+- статус?
+
+
+категория картинки:
+- идентификатор
+- навание
+- описание
+- порядковый номер
+
+куда рейтинг засунуть?
+
+-----------------------------------------------------
+
+picture
+-id  (int 11)
+-type (varchar 5)
+-storage () - путь к картинке
+-sort_order (int11)
+-status (int11)
+
+
+--
+2
+-- Структура таблицы `3_images`
+3
+--
+4
+ 
+5
+CREATE TABLE IF NOT EXISTS `3_images` (
+6
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+7
+  `img` varchar(255) NOT NULL,
+8
+  PRIMARY KEY (`id`)
+9
+) ENGINE=MyISAM  DEFAULT CHARSET=cp1251 AUTO_INCREMENT=8 ;
+
+
+
+create table testblob (
+    image_id        tinyint(3)  not null default '0',
+    image_type      varchar(25) not null default '',
+    image           blob        not null,
+    image_size      varchar(25) not null default '',
+    image_ctgy      varchar(25) not null default '',
+    image_name      varchar(50) not null default ''
+);
